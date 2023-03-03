@@ -1,5 +1,6 @@
 #include "listwindow.h"
 #include "./ui_listwindow.h"
+#include "product.h"
 
 #include <QDialog>
 #include <QLabel>
@@ -51,10 +52,35 @@ void ListWindow::addNewItem()
         QString newItemName = itemNameEdit->text();
         ui->listWidget->addItem(newItemName);
     }
+
+    // get the input data from the dialog
+    QString itemName = itemNameEdit->text();
+    double itemQuantity = itemQuantityEdit->text().toDouble();
+    QString itemUnit = itemUnitComboBox->currentText();
+
+    // create a new Product object with the input data
+    Product newItem(itemName, itemQuantity, itemUnit);
+
+    // add the new item to the list widget using QListWidgetItem
+    QListWidgetItem *newItemWidget = new QListWidgetItem(ui->listWidget);
+    newItemWidget->setText(QString("%1 %2 %3").arg(itemQuantity).arg(itemUnit).arg(itemName));
+    newItemWidget->setData(Qt::UserRole, QVariant::fromValue(newItem));
+
 }
 
 void ListWindow::on_pushButton_clicked()
 {
     addNewItem();
+}
+
+void ListWindow::listWidgetItemClicked(QListWidgetItem *item)
+{
+    // retrieve the Product data from the clicked item
+    Product itemData = item->data(Qt::UserRole).value<Product>();
+
+    // use the Product data to update the UI
+    ui->nameLabel->setText(itemData.name());
+    ui->quantityLabel->setText(QString::number(itemData.quantity()));
+    ui->unitLabel->setText(itemData.unit());
 }
 

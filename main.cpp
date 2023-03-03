@@ -1,21 +1,12 @@
-#include "product.h"
+#include "listwindow.h"
 
-Product::Product(const QString& name, double quantity, const QString& unit)
-    : m_name(name), m_quantity(quantity), m_unit(unit)
-{
-}
+#include <QApplication>
 
-QString Product::name() const
-{
-    return m_name;
-}
 
-double Product::quantity() const
+int main(int argc, char *argv[])
 {
-    return m_quantity;
-}
-
-QString Product::unit() const
-{
-    return m_unit;
+    QApplication a(argc, argv);
+    ListWindow w;
+    w.show();
+    return a.exec();
 }
