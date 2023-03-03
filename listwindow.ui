@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ListWindow</class>
+ <widget class="QMainWindow" name="ListWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>811</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ListWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #998C77;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>781</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+    background-color: #E0E691;
+	color: #000000;
+}
+	</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>781</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: #959959;
+	color: #000000;
+}</string>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/iconmonstr-plus-square-lined-24.png</normaloff>icons/iconmonstr-plus-square-lined-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: #959959;
+	color: #000000;
+}</string>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/iconmonstr-trash-can-lined-24.png</normaloff>icons/iconmonstr-trash-can-lined-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: #959959;
+	color: #000000;
+}</string>
+       </property>
+       <property name="text">
+        <string>Properties</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/iconmonstr-gear-thin-24.png</normaloff>icons/iconmonstr-gear-thin-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>811</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGroceries_List_App">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExport"/>
+    <addaction name="actionImpoet"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionAdd"/>
+    <addaction name="actionRemove"/>
+   </widget>
+   <addaction name="menuGroceries_List_App"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionImpoet">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
